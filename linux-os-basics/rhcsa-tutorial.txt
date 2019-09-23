@@ -1,0 +1,96 @@
+rhcsa
+
+file system hierachy
+
+checking for block disk
+
+lsblk
+
+fdisk
+
+fdisk /dev/sdb
+
+parted
+
+create partition:
+
+parted /dev/sdb
+
+mklabel msdos
+
+mkpart primary 0 500M
+
+quit 
+
+partprobe or reboot
+
+remove partition:
+
+create a physical volume
+
+pvcreate
+pvs
+
+creating a volume group
+
+vgcreate -s - extents default 4MB 
+
+vgs
+vgscan
+vgdisplay
+vgextend
+
+creating a logical volume
+
+lvcreate
+lvscan
+lvs
+lvdisplay
+lvextend
+lvreduce
+lvremove
+
+swap
+
+- swap partiton
+- swap label 82
+- mkswap 
+- /etc/fstab
+- swapon -a
+- top
+
+ext4
+ - extend
+
+ resize2fs /mount/device size
+ 
+ e2fsck -f /mount/device
+ 
+ - reduce
+
+umount /home
+
+lvdipsplay | grep home - get lvm path
+
+e2fsck -f /dev/mapper/vg_lv-homeVol00
+
+resize2fs /dev/mapper/vg_lv-homeVol00 size
+
+e2fsck -f /dev/mapper/vg_lv-homeVol00
+
+mount /home 
+
+ - extents calculation
+
+xfs - not on the exam
+
+basic file system permissions
+ - chmod; chown; chgrp; sticky bits
+advanced file system permissions
+ - getfacl
+ - setfacl
+
+nfs
+
+autofs
+
