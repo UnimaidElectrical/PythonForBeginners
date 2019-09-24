@@ -11,3 +11,5 @@ while True:
         break
     print(i)
 print("Finished")
+
+#Using the continue statement outside a loop causes an error
