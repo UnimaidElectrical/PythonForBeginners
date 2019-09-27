@@ -1,5 +1,22 @@
 rhcsa
 
+useradd
+
+usermod
+
+userdel
+
+passwd
+
+groupadd
+
+groupmod
+
+groupdel
+
+
+
+
 file system hierachy
 
 checking for block disk
@@ -92,5 +109,51 @@ advanced file system permissions
 
 nfs
 
+yum -y install nfs-utils
+
+systemctl enable nfs
+
+systemctl start nfs
+
+firewall-cmd --list-all 
+
+firewall-cmd --add-service=nfs --permanent && firewall-cmd --reload
+
+
+
+
 autofs
+
+yum -y install autofs
+
+systemctl enable autofs
+
+systemctl start autofs
+
+vi /etc/auto.master
+
+mkdir -p /ldap/home
+mkdir -p /ldap/projects
+
+mountpoint mapfile location
+
+/ldap /etc/auto.master.d/home.master
+
+vi /etc/auto.master.d/home.master
+
+home -rw 192.168.56.106:/mnt/data1
+
+projects -rw 192.168.56.106:/mnt/data2
+
+
+ldap
+
+sshd
+
+authorized keys
+
+ssh tunneling
+
+ssh -L local_port:remote_address:remote_port username@server.com
+
 
