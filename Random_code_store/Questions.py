@@ -41,5 +41,49 @@ b[1]=8
 print(b[2])
 
 
+#This shows the difference betwwn a list and a dictionary
+list=[1,1,2,3,5,8,13]
+print(list[list[4]])
 
 
+#what does this code do?
+#This code will print all the even number between 2 and 10
+for i in range(10):
+    if not i%2==0:   # not will be for even number and without the not will be for odd numbers
+        print(i+1)
+
+
+
+#what is the output of this code?
+i='3471'
+z=i[::-1]
+if i==z:
+    print(z)
+else:
+    print(z[2]*2 + z[3]*2)
+
+
+#what is the output of this code?
+a=[1,2,3,4]
+b=a[:]
+print(a==b,id(a)==id(b))
+
+
+
+#Find the blanks to complete the implementation of custom map function.
+
+# def myMap(lst,f):
+#   nlst=[]
+#     for val_lst:
+#         nlst.append(__(val))
+#     return(nlst)
+# x=[1,2,3,4,5]
+# print(myMap(x,lambda x:x**2))
+
+
+
+#what is the output of this code?
+b=0
+for i in range (100):
+b+=b
+print(b)
