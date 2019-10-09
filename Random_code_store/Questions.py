@@ -73,9 +73,9 @@ print(a==b,id(a)==id(b))
 #Find the blanks to complete the implementation of custom map function.
 
 # def myMap(lst,f):
-#   nlst=[]
+#     nlst=[]
 #     for val_lst:
-#         nlst.append(__(val))
+#        nlst.append(__(val))
 #     return(nlst)
 # x=[1,2,3,4,5]
 # print(myMap(x,lambda x:x**2))
@@ -85,5 +85,42 @@ print(a==b,id(a)==id(b))
 #what is the output of this code?
 b=0
 for i in range (100):
-b+=b
+b +=b
 print(b)
+
+#How many numbers will this code output?
+i=0
+while i <=5:
+    print(i)
+    i+=1
+
+#What is the output of this code.
+a=(lambda x:x**2 + 5 * x + 4)(-4)
+print(a)
+
+
+#What is the output of this code
+a = [1,2,3,4]
+def func(a):
+    a = a + [5]
+    return a
+print(a == func(a))
+
+
+#What is the output of this code
+print((2**2) ** (12%10))
+
+#What is the output of this code
+a=[10,3,7]
+y,x,z=a
+print(y%z)
+
+
+
+#What is the output of this code
+def my_func(x,y):
+    if(x > y and y > 0):
+        print("True")
+    else:
+        print("False")
+my_func(9,8)
