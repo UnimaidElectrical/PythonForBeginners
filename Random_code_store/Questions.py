@@ -124,3 +124,74 @@ def my_func(x,y):
     else:
         print("False")
 my_func(9,8)
+
+#What is the output of this code
+list1 = [1,2,3,4]
+list2 = [5,6,7,7]
+print(len(list1 + list2))
+
+#What is the output of this code
+
+def f(n):
+    if n==1:
+        return "0"
+    else:
+        return n*f(n-1)
+print(int(f(5) == 120))
+
+
+#What is the output of this code
+x='123'
+def fun(x):
+    y=x.split(x[0])
+    print(y[1])
+fun(x)
+
+
+#What is the output of this code
+import math
+print(math.pow(27,1/3))
+
+#What is the output of this code
+list1=[1,2,3,4];
+list2=list1;
+list1.append(5);
+print(list2);
+
+
+#What is the output of this code
+seq=2
+list_1 = [1,1,4]
+for i in range(1, len(list_1)):
+    h=list_1[i]-list_1[i-1]
+    if h!=seq:
+        list_1[i] = list_1[i-1] +seq
+print(list_1)
+
+
+#What is the output of this code
+a= [1,[2,3]]
+b = [1,2,3]
+c=a[:]
+d=b[:]
+print(c is a,d is b)
+
+#What is the output of this code
+f = ((0,)
+f = f +(2,)
+print(f)
+
+
+#what is the output of this code
+print(float(5*5//9+int(12)))
+
+#What is the output of this code
+a=2
+b=3
+a,b=b,a
+print(a**b)
+
+
+
+
+
