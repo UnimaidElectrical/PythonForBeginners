@@ -192,6 +192,38 @@ a,b=b,a
 print(a**b)
 
 
+#What is the output of this code
+def func(a,b):
+    c=(a+b)+(a+b)
+    d=c%2
+    e=d+c
+    print(c)
+func(3,3)
 
 
+#What is the output of this code
+a= [x for x in range(4)]
+print(sum(a[1::-2]+ a[::-3]))
+
+
+#What is the output of this code
+if (2==2) and (2+5 >=7):
+    print("true")
+else:
+    print("false")
+
+#What is the output of this code
+print({True: 'yes',1: 'no', 1.0: 'maybe'})
+
+
+#What is the output of this code
+y=4
+x=2
+z=3
+def a(x,y,z):
+    if x!=8 or y==5 and z==3:
+        print(str(x*z)+str(y))
+    else:
+        print("66")
+a(x,y,z)
 
