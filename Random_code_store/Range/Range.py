@@ -15,4 +15,33 @@ nums[2]=2
 nums[3]=3
 nums[4]=4
 
+#If a range is called with one argument. It produces an object with values from 0 to that argument. in other words an argument 10 will have an output of 0 to 10
+#If a range is called with two arguments. It produces values from the first to the second.
+
+numbers=list(range(3,8))
+print(numbers)
+
+print(range)==range(0,20)
+
+num=20
+print(range(num))
+print(list(range(num)))
+
+
+#the range always starts with the first argument and stops at a value below the last argument
+nums=list(range(5,8))
+print(len(nums))
+
+
+#A range can have a third argument, this determines the interval of the sequence produced.
+#the third argument must always be an integer.
+
+numbers=list(range(5,20,2))
+print(numbers)
+
+
+nums= list(range(3,15,3))
+print(nums[2])
+
+
 
