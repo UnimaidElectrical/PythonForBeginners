@@ -227,3 +227,58 @@ def a(x,y,z):
         print("66")
 a(x,y,z)
 
+
+
+#What is the output of this code
+def shout(word):
+    return word + "!"
+speak = shout
+output = speak("shout")
+print(output)
+
+
+#What is the output of this code
+
+def sum(x):
+    res=0
+    for i in range(x):
+        res +=i
+    return res
+print(sum(5))
+
+
+#What is the output of this code
+def print_nums(x):
+    for i in range(x):
+        print(i)
+        return
+print_nums(10)
+
+
+#What is the output of this code
+def func(x):
+    res=0
+    for i in range(x):
+        res += i 
+    return res
+print(func(4))
+
+
+
+#What is the output of this code
+try:
+    variable=10
+    print(10/2)
+except ZeroDivisionError:
+    print("Error")
+print("Finished")
+
+
+#What is the output of this code
+try:
+    print(1)
+except:
+    print(2)
+finally:
+    print(3)
+    
