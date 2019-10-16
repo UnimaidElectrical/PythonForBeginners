@@ -281,4 +281,68 @@ except:
     print(2)
 finally:
     print(3)
-    
+
+
+#What is the output of this code
+a =[3,5,7,9]
+b = a 
+a[1]=8
+print(b[1])
+
+
+#What is the output of this code
+count = 0
+for i in range(5):
+    for j in range(i):
+        count+=1
+print (count)
+
+
+#What is the output of this code
+import re
+x='from:physicsisfunny@python.com'
+y=re.findall('\S+?@\S+',x)
+print(y)
+
+#What is the output of this code
+list1=[]
+list2=[]
+
+for i in range(5)[::-1]:
+    list1.append(i)
+for j in list1[::-2]:
+    list2.append(j+1)
+print(list1[2])
+
+#What is the output of this code
+s='potato'
+print(s[-5::-1])
+
+#What is the output of this code
+x=y=[10,5,7]
+x[0] =5
+print(y)
+
+
+#What is the output of this code
+num_list = [-4,-3,-2]
+print(abs(-4)*abs(max(num_list)))
+
+
+#What is the output of this code
+a=[7,3,9,5]
+b=[8,0,4]
+
+if a >b:
+    print(len(a))
+else:
+    print(len(b))
+
+
+#What is the output of this code
+num = 12
+answer = 2 if num % 7 >= 5 else 0
+print(answer)
+
+
+#What is the output of this code
