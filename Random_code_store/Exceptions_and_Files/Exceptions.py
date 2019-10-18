@@ -50,3 +50,38 @@ except:
     print("An error occured")
 
 
+#raising exceptions
+print(1)
+raise ValueError
+print(2)
+
+# you need to specify the type of exception raised at all times
+
+# Which error occur during the handling of this code 
+try:
+    print(1/0)
+except ZeroDivisionError:
+    raise ValueError   
+
+
+
+# exceptions can be raise without giving details about them
+
+name = '123'
+raise NameError("Invalid name")
+
+# fill in the blanks to raise a ValueError exception, if the input is negative.
+
+num = input(":")
+if float(num) > 0
+    raise ValueError("Negative!")
+
+
+
+In the except block the raise statement can be used without arguments to re-raise whatever exception occured.
+
+try:
+    num = 5/0
+except:
+    print("An error occured")
+    raise
