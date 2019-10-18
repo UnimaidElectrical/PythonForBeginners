@@ -346,3 +346,112 @@ print(answer)
 
 
 #What is the output of this code
+arr=[str(i**3) for i in range (3,5)]
+print(sum(arr))
+
+
+#What is the output of this code
+a=1
+b=3
+if (a<=5 and b<9):
+    if (a==4):
+        b=20
+    a += 1
+    b -=1
+if (b<20):
+    a=-5
+print(a)
+
+
+#What is the output of this code
+a=6
+a,b= 0, a+1
+print(a*"str")
+
+
+#What is the output of this code
+X = "2" + "4"
+print(X)
+
+
+#What is the output of this code
+s="string"
+x = s
+s = s + "s"
+print(x[-1])
+
+
+#What is the output of this code
+x = 5
+def changevar(x):
+    x+=1
+    return x
+print(changevar(x))
+
+
+#Is the code below valid ?
+x = {(1,2):"buckle", 34:"knock","56":"forget"}
+
+
+#What is the output of this code
+try:
+    s = ['a','c']
+    n = [0,2]
+    s[1:1] = 'b'
+    n[1:1] = 1
+except:
+    pass
+print(s[1],n[1])
+
+
+#What is the output of this code
+def f(n,v):
+    n= len(v)
+    v.append(n)
+n=0
+v=[8,0,4,6]
+f(n,v)
+print(n,sum(v))
+
+
+#What is the output of this code
+def print_with_exclamation(word):
+    print(word + "!")
+print_with_exclamation("spam")
+
+
+#What is the output of this code
+a = [1,2,[3,4],6,5]
+print(a[a[2][1]])
+
+
+#What is the output of this code
+x=int('22143'[3])
+print(x)
+
+#What is the output of this code
+dict_a = {'A':1,'B':2,'C':3}
+print(len(dict_a))
+
+
+#What is the output of this code
+num1 =[1,3,4,5]
+num2=num1
+num2[0] = 5
+print(num1[0])
+
+
+#What is the output of this code
+num1=5
+num2="5"
+print(num1*int(num2))
+
+
+#What is the output of this code
+
+
+
+
+
+
+
