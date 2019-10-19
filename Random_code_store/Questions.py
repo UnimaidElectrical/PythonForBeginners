@@ -448,7 +448,8 @@ print(num1*int(num2))
 
 
 #What is the output of this code
-
+def f(a,x):
+    
 
 
 
