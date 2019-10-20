@@ -448,8 +448,14 @@ print(num1*int(num2))
 
 
 #What is the output of this code
-def f(a,x):
-    
+i=0
+def func(x,y):
+    i=x+y
+    func(4,5)
+print(i)
+
+
+
 
 
 
