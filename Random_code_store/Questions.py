@@ -454,8 +454,48 @@ def func(x,y):
     func(4,5)
 print(i)
 
+#What is the output of this code: Jesse Schaar
+class Myclass():
+    n=0
+    def__init__(self):
+        MyClass.n +=1
+    def__del__(self):
+        Myclass.n -= 1
+a = MyClsss()
+print (a.n)
+b = MyClass()
+print(b.n)
+a = MyClass()
+print(a.n)
 
 
+#What is the output of this code?
+x=1
+while x<5:
+    x *= 2
+print(x)
+
+#What is the correct output ?
+words = ["$10,","$20,","$30"]
+for i in range(3):
+    print(words[i], end='')
+    if i ==2:
+        print()
+for i in words:
+        print(i,end = '')
+
+
+#What coes the list comprehension create?
+a=[2*i +1 for i in range(7)]
+print (a)
+
+
+#What is the output of this code?
+a=[1,2,3,4,12,13]
+for i in a:
+    if i % 2 ==1:
+        a.append(0)
+print(len(a))
 
 
 
