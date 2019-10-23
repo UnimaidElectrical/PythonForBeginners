@@ -498,6 +498,34 @@ for i in a:
 print(len(a))
 
 
+#What is the output of this code?
+double = lambda x : X * 6
+print(double(5))
+
+#What is the output of this code?
+A = [4,3,1,6,8,5,2,7]
+n = len(A)
+for pos in range(n):
+    m = min(A[:n-pos])
+    A.remove(m)
+    A.append(m)
+print(A)
+
+#What is the output of this code?
+name ="Mark Foxx";
+names = name.split(" ");
+if names[1].endswith("foxx"):
+    print(1)
+else:
+    print(0)
+
+
+
+#What is the output of this code?
+a, b, *c = [9,8,7,6]
+print(b)
+
+
 
 
 
