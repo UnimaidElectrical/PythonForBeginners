@@ -519,11 +519,52 @@ if names[1].endswith("foxx"):
 else:
     print(0)
 
-
-
 #What is the output of this code?
 a, b, *c = [9,8,7,6]
 print(b)
+
+#What is the output of this code?
+class A:
+    def __init__(self):
+        print(1)
+class B(A):
+    def __init__(self):
+        super(A,self).__init__()
+        print(2)
+obj = B()
+
+#What is the output of this code?
+def build_list(element,to=[]):
+    to.append(element)
+    return to
+my_list = build_list(2)
+print (my_list)
+my_other_list = build_list(5)
+print (my_other_list)
+
+#What is the output of this code?
+class Mul:
+    def __init__(self,n):
+        self.n = n
+    def __pow__(self,fles):
+        return [fles ** i for i in self.n]
+print(sum(Mul((1,2,3))**2))
+
+
+#What is the output of this code?
+class A:
+    def __init__(a,b,c):
+        print(b)
+    A(8,3)
+
+
+#What is the output of this code?
+i=0
+def func(x,y):
+    i =x + y
+func(4,5)
+print(i)
+
 
 
 
