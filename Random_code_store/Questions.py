@@ -566,7 +566,12 @@ func(4,5)
 print(i)
 
 
-
+#What is the output of this code?
+i=0
+def func(x,y):
+    i =x + y
+func(4,5)
+print(i)
 
 
 
