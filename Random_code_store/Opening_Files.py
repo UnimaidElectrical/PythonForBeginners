@@ -28,4 +28,13 @@ Adding "b" to a mode opens it in binary mode, which is used for non-text files (
 # You can use the + sign with each of the modes above to give them extra access to files. For example, r+ opens the file for both reading and writing.
 
 
+# Reading Files
+# The contents of a file that has been opened in text mode can be read using the read nethod
+
+file = open("filename.txt", "r")
+cout = file.read()
+print(cout)
+file.close()
+
+# This will print all of the contents of the file "filename.txt"
 
