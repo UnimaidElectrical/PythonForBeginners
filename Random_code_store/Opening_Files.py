@@ -40,11 +40,10 @@ file.close()
 
 
 
-# Reading Files Continued
+# Reading Files
 
-# To read only a certain amount of a file, you can provide a number as an argument to the read function. 
-# This determines the number of bytes that should be read. You can make more calls to read on the same file object 
-# to read more of the file byte by byte. With no argument, read returns the rest of the file.
+# To read only a certain amount of a file, you can provide a number as an argument to the read function. This determines the number of bytes that should be read. 
+# You can make more calls to read on the same file object to read more of the file byte by byte. With no argument, read returns the rest of the file.
 
 file = open("filename.txt", "r")
 print(file.read(16))
@@ -57,15 +56,24 @@ file.close()
 
 
 
+
 # Reading Files
 
-# After all contents in a file have been read, any attempts to read further from that file will return an empty string, 
-# because you are trying to read from the end of the file.
+# To retrieve each line in a file, you can use the readlines method to return a list in which each element is a line in the file.
+# For example:
+
 file = open("filename.txt", "r")
-file.read()
-print("Re-reading")
-print(file.read())
-print("Finished")
+print(file.readlines())
 file.close()
 
-# Just like passing no arguments, negative values will return the entire contents.
+
+# You can also use a for loop to iterate through the lines in the file:
+
+file = open("filename.txt", "r")
+
+for line in file:
+    print(line)
+
+file.close() 
+
+
