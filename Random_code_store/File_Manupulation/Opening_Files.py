@@ -56,7 +56,6 @@ file.close()
 
 
 
-
 # Reading Files
 
 # To retrieve each line in a file, you can use the readlines method to return a list in which each element is a line in the file.
@@ -74,6 +73,23 @@ file = open("filename.txt", "r")
 for line in file:
     print(line)
 
-file.close() 
+file.close()
+
+
+
+# Working with Files
+
+# It is good practice to avoid wasting resources by making sure that files are always closed after they have been used. 
+# One way of doing this is to use try and finally.
+
+try:
+   f = open("filename.txt")
+   print(f.read())
+finally:
+   f.close()
+
+# This ensures that the file is always closed, even if an error occurs.
+
+
 
 
