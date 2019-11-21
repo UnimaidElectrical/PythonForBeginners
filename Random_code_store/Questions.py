@@ -576,3 +576,12 @@ print(i)
 
 
 
+# Will the close() function get called in this code?
+try:
+  f = open("filename.txt")
+  print(f.read())
+  print(1 / 0)
+finally:
+  f.close()
+
+
