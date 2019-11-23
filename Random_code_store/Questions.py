@@ -575,7 +575,6 @@ print(i)
 
 
 
-
 # Will the close() function get called in this code?
 try:
   f = open("filename.txt")
@@ -585,3 +584,12 @@ finally:
   f.close()
 
 
+#What is the output of this code?
+
+a,b =[0],[0]
+a,b=b,a
+if(a is b):
+    print(True)
+else:
+    print(False)
+    
