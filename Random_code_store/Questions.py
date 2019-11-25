@@ -592,4 +592,16 @@ if(a is b):
     print(True)
 else:
     print(False)
-    
+
+
+#What is the output of this code?
+
+def func(**querty):
+    print(querty["one"])
+func(a=0,one=173)
+
+
+#What is the output of this code?
+a = 1 % 213
+b = 1 % 215
+print(a == abs(b))
