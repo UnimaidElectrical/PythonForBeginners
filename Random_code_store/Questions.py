@@ -605,3 +605,10 @@ func(a=0,one=173)
 a = 1 % 213
 b = 1 % 215
 print(a == abs(b))
+
+
+#What is the output of this code?
+a=["c","b","a"]
+a=a[::-1]
+print(a[1])
+
