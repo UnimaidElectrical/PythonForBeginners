@@ -612,3 +612,12 @@ a=["c","b","a"]
 a=a[::-1]
 print(a[1])
 
+
+#What is the output of this code?
+def func(a,b):
+    c=(a+b)+(a+b)
+    d=c%3
+    return(d)
+print(func(2,2))
+
+
