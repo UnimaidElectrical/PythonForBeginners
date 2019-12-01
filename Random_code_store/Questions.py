@@ -621,3 +621,13 @@ def func(a,b):
 print(func(2,2))
 
 
+#What is the output of this code?
+randinterger=range(4,7,2)
+randinterger.append(9)
+y=float(len(randinterger))
+v=len(randinterger)
+print("v" + y+randinteger[1])
+
+
+
+
