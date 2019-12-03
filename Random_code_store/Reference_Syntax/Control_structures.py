@@ -165,6 +165,154 @@ print(result)
 
 
 
+1. Make a function that sums the list mylist = [1,2,3,4,5]
+2. Can functions be called inside a function?
+3. Can a function call itself? (hint: recursion)
+4. Can variables defined in a function be used in another function? (hint: scope)
+
+
+
+
+
+
+list = [ "New York", "Los Angles", "Boston", "Denver" ]
+
+print(list)     # prints all elements
+print(list[0])  # print first element
+
+list2 = [1,3,4,6,4,7,8,2,3]
+
+print(sum(list2))
+print(min(list2))
+print(max(list2))
+print(list2[0])
+print(list2[-1])
+
+
+
+
+
+
+
+
+states = [ 'Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming' ] 
+
+# Display all states starting with the letter M
+# all_states=states.split()
+
+for i in states:
+    if states.startswith('m'):
+        print(i)
+    
+
+
+    #String to be splitted
+St = 'where is my mobile'
+
+#Split the string on blank characters
+List = St.split()
+
+#for each element in the list, if it starts with 'm' then print it
+for s in List:
+    if s.startswith('m'):
+        print(s)
+
+
+# Append and Pop
+x = [3,4,5]
+x.append(6)
+print(x)
+x.append(7)
+print(x)
+x.pop()
+print(x)
+
+
+# Accessing Items
+x = [3,4,5]
+
+print(x[0])
+print(x[1])
+
+print(x[-1])
+
+
+
+questions:
+
+1, Given the list y = [6,4,2] add the items 12, 8 and 4.
+2, Change the 2nd item of the list to 3.
+
+
+
+#Sorting
+
+
+
+
+
+x = [ (3,6),(4,7),(5,9),(8,4),(3,1)]
+y=(x[0][0],x[1][0])
+print(y)
+
+
+x = [ (3,6),(4,7),(5,9),(8,4),(3,1)]
+x.sort(x[0])
+
+y=
+
+
+
+x = [3,6,21,1,5,98,4,23,1,6]
+x.sort()
+print(x)
+
+# list Strings can also be sorted.
+
+words = ["Be","Car","Always","Door","Eat" ]
+words.sort()
+print(words)
+
+
+# Reverse order
+# To sort in reverse order, combine it with the method reverse()
+
+
+x = [3,6,21,1,5,98,4,23,1,6]
+x.sort()
+x = list(reversed(x))
+print(x)
+
+
+words = ["Be","Car","Always","Door","Eat" ]
+words.sort()
+words = words[::-1]
+print(words)
+
+
+# Range function
+
+x = list(range(100))
+print(x)
+
+
+# Python starts counting from zero. Now what if you want to count from 1 to 100?
+
+x = list(range(1,101))
+print(x)
+
+
+# A third parameter defines the step size, by default its one. Range can be used in a for loop:
+
+for i in range(1,11,2):
+   print(i)
+
+Try the exercises below
+
+Create a list of one thousand numbers
+Get the largest and smallest number from that list
+Create two lists, an even and odd one.
+
 
 
 
