@@ -307,12 +307,159 @@ print(x)
 for i in range(1,11,2):
    print(i)
 
+# Try the exercises below
+
+# Create a list of one thousand numbers
+# Get the largest and smallest number from that list
+# Create two lists, an even and odd one.
+
+
+# we define some key,value pairs and then print them using their unique keys.
+
+words = {}
+words["BMP"] = "Bitmap"
+words["BTW"] = "By The Way"
+words["BRB"] = "Be Right Back"
+
+print words["BMP"]
+print words["BRB"]
+
+
+
+
+
+
+
+
+
+
+#Nested Loops
+# A loop can contain one or more other loops: you can create a loop inside a loop.
+# This principle is known as nested loops. Nested loops go over two or more loops.
+# Programmers typically nest 2 or 3 levels deep. Anything higher than that is just confusing
+
+
+persons = [ "John", "Marissa", "Pete", "Dayton" ]
+restaurants = [ "Japanese", "American", "Mexican", "French" ]
+
+for person in persons:
+    for restaurant in restaurants:
+        print(person + " eats " + restaurant)
+
+
 Try the exercises below
 
-Create a list of one thousand numbers
-Get the largest and smallest number from that list
-Create two lists, an even and odd one.
+Given a tic-tac-toe board of 3x3, print every position
+horizontal_view=["1","2","3"]
+vertical_view=["a","b","c"]
+
+for horizontal in horizontal_view:
+    for vertical in vertical_view:
+        print(horizontal + vertical)
+
+Create a program where every person meets the other
+persons=["John", "Marissa", "Pete", "Dayton"]
+persns=["Marissa", "Pete", "Dayton"]    (since one persion cannot meet themselves how can i take that out)
+
+for person in persons:
+    for persn in persns:
+        print (person + " meets " + persn)
+
+
+If a normal for loop finishes in n steps O(n), how many steps has a nested loop?
+a nested loop will still have O(n) steps
 
 
 
+# Slices
+# A slice can be taken from a string or list, just as you can take a slice from a pizza.
+# If you have a variable, be it a list or a string, that you want a part of, you don’t have to define it all over again.
+# You can get a copy of the variable, which is the whole or a subset of the original variable. This concept is known as slicing.
+
+
+# List Slice
+
+persons = [ "John", "Marissa", "Pete", "Dayton" ]
+
+slice = persons[0:2]
+print(slice)
+
+
+# String Slice
+
+destination = "hello world"
+mySlice = destination[6:11]
+print(mySlice)
+
+destination = "summer holiday at beach"
+mySlice = destination[0:6]
+print(mySlice)
+
+
+# Try the exercises below
+ 
+# Take a slice of the list below:
+pizzas = ["Hawai","Pepperoni","Fromaggi","Napolitana","Diavoli"]
+MySlice=pizzas[1:2]
+print(MySlice)
+
+# Given the text “Hello World”, take the slice “World”
+
+world_slices="Hello World"
+MySlice=world_slices[6:11]
+print(MySlice)
+
+
+# Multiple return
+# Python functions can return multiple variables. These variables can be stored in variables directly. 
+# A function is not required to return a variable, it can return zero, one, two or more variables.
+# This is a unique property of Python, other programming languages such as C++ or Java do not support this by default.
+
+def complexfunction(a,b):
+    sum = a +b
+    return sum
+complexfunction(2,3)
+
+
+# Multiple Return 
+
+def getPerson():
+    name = "Leona"
+    age = 35
+    country = "UK"
+    return name,age,country
+
+# name,age,country = getPerson()
+print(name)
+print(age)
+print(country)
+
+Try the exercises below:
+
+Create a function that returns a,b and a+b
+
+def sum_and_list():
+    listed = "ab"
+    sum = a+b
+    return sum,listed
+sum,listed=sum_and_list()
+print(sum)
+print(listed)
+
+
+Create a function that returns 5 variables
+
+def car_choices():
+    jeep = "Wrangler_2019"
+    audi = "Q7_2019"
+    mazda = "a6_2019"
+    lexus = "Rx350_2019"
+    BMW = "series_2019"
+    return jeep,audi,mazda,lexus,BMW
+jeep,audi,mazda,lexus,BMW=car_choices()
+print(jeep)
+print(audi)
+print(mazda)
+print(lexus)
+print(BMW)
 
