@@ -434,9 +434,9 @@ print(name)
 print(age)
 print(country)
 
-Try the exercises below:
+# Try the exercises below:
 
-Create a function that returns a,b and a+b
+# Create a function that returns a,b and a+b
 
 def sum_and_list():
     listed = "ab"
@@ -447,7 +447,7 @@ print(sum)
 print(listed)
 
 
-Create a function that returns 5 variables
+# Create a function that returns 5 variables
 
 def car_choices():
     jeep = "Wrangler_2019"
@@ -462,4 +462,54 @@ print(audi)
 print(mazda)
 print(lexus)
 print(BMW)
+
+
+
+
+Scope
+Variables have a certain reach within a program. 
+A global variable can be used anywhere in a program, but a local variable is known only in a certain area (function, loop)
+Sometimes the word scope is used in projects: “its outside the scope of the project”, meaning not included. Likewise, 
+a variable can be outside the scope of a function.
+
+Scope has to do with where a variable can be used. If you define a variable, it’s not necessarily usable everywhere in the code. 
+A variable defined in a function is only known in a function, unless you return it.
+
+
+def something():
+   localVar = 1
+
+# this will crash because localVar is a local variable
+print(localVar)
+
+
+
+
+# That means unless you return the variables from a function, they can only be used there. 
+# This is in stark constrast with global variables: global variables can be used anywhere including in multiple functions and the main code. 
+# Global variables are often defined at the top of the program.
+
+
+
+# Global and local variables
+# In the program below, balance is a global variable. It can be used anywhere in the code. But the variable x can only be used inside addAmount.
+
+
+
+balance = 0
+
+def addAmount(x):
+    global balance
+    balance = balance + x
+
+addAmount(5)
+print(balance)
+
+
+
+Exercise
+Try the exercises below:
+
+Add a function reduce amount that changes the variable balance
+Create a function with a local variable
 
