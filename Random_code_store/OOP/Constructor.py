@@ -13,9 +13,6 @@ print(bob.legs)
 
 
 
-
-
-
 class Plane:
     def __init__(self):
         self.wings = 2
@@ -49,8 +46,16 @@ class Human:
        self.legs = 2
        self.arms = 2
 
+class sam:
+    def __init__(self):
+        self.head = 5
+        self.body = 4
+
 bob = Human()
 tom = Bug()
+cia = sam()
 
 print(tom.wings)
 print(bob.arms)
+print(cia.head)
+
