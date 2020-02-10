@@ -631,3 +631,460 @@ print("v" + y+randinteger[1])
 
 
 
+
+*********************************************************************************************************************************************************
+                                                    NEW QUESTIONS
+*********************************************************************************************************************************************************
+
+Question:
+Insert the correct keyword to make the variable x belong to the global scope.
+
+
+Solution:
+def myfunc():
+  
+global x
+  x = "fantastic"
+
+
+
+
+Question:
+Insert the correct syntax to convert x into a complex number.
+
+Solution:
+x = 5
+x = complex (x)
+
+
+Question:
+Replace the character H with a J.
+
+
+Solution:
+
+txt = "Hello World"
+txt = txt.replace ("H", "J")
+
+
+
+Question:
+Insert the correct syntax to add a placeholder for the age parameter.
+
+Solution:
+age = 36
+txt = "My name is John, and I am {}"
+print(txt.format(age))
+
+
+
+
+Question:
+The statement below would print a Boolean value, which one?
+
+
+Solution:
+print(bool("abc"))
+
+True
+
+
+
+Question:
+The statement below would print a Boolean value, which one?
+
+Solution:
+print(bool(0))
+
+False
+
+
+
+Question:
+
+Use the insert method to add "lemon" as the second item in the fruits list.
+
+Solution:
+fruits = ["apple", "banana", "cherry"]
+fruits.insert(1,"lemon")
+
+
+Question:
+Use the remove method to remove "banana" from the fruits list.
+
+
+Solution:
+fruits = ["apple", "banana", "cherry"]
+fruits.remove("banana")
+
+
+Question:
+Use negative indexing to print the last item in the list.
+
+
+Solution:
+
+fruits = ["apple", "banana", "cherry"]
+print(fruits[-1])
+
+
+
+
+Question:
+Use a range of indexes to print the third, fourth, and fifth item in the list.
+
+Solution:
+fruits = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(fruits[2:5])
+
+
+Question:
+
+Use the correct syntax to print the number of items in the list.
+
+Solution:
+
+fruits = ["apple", "banana", "cherry"]
+print(len(fruits))
+
+#printing from a tuple, dictionary and a list are quite different 
+
+
+Question:
+Use the correct syntax to print the first item in the fruits tuple.
+
+Solution:
+fruits = ("apple", "banana", "cherry")
+print(fruits[0])
+
+
+
+
+Question:
+Use the correct syntax to print the number of items in the fruits tuple.
+
+Solution:
+fruits = ("apple", "banana", "cherry")
+print(len(fruits))
+
+Question:
+Use the add method to add "orange" to the fruits set.
+
+Solution:
+fruits = {"apple", "banana", "cherry"}
+fruits.add("orange")
+
+
+
+
+
+Question:
+Use the correct method to add multiple items (more_fruits) to the fruits set.
+
+Solution:
+fruits = {"apple", "banana", "cherry"}
+more_fruits = ["orange", "mango", "grapes"]
+fruits.update(more_fruits)
+
+
+Question:
+Use the remove method to remove "banana" from the fruits set.
+
+Solution:
+fruits = {"apple", "banana", "cherry"}
+fruits.remove("banana")
+
+
+
+Question:
+
+Use the get method to print the value of the "model" key of the car dictionary.
+
+Solution:
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(car.get["model"])
+
+
+Question:
+Change the "year" value from 1964 to 2020.
+
+Solution:
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+car["year"] = 2020
+
+
+Question:
+Add the key/value pair "color" : "red" to the car dictionary.
+
+Solution:
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+car["color"] = "red"
+
+
+
+Question:
+Use the pop method to remove "model" from the car dictionary.
+
+Solution:
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+car.pop("model")
+
+
+
+Question:
+Use the clear method to empty the car dictionary.
+
+
+Solution:
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+car.clear()
+
+
+
+Question:
+Print "Hello World" if a is greater than b.
+
+Solution:
+
+a = 50
+b = 10
+if a > b:
+  print("Hello World")
+
+
+Question:
+Print "Hello" if a is equal to b, or if c is equal to d.
+
+Solution:
+
+if a == b 
+or
+ c == d:
+  print("Hello")
+
+
+
+Question:
+Print i as long as i is less than 6.
+
+
+
+
+Solution:
+i = 1
+while i < 6:
+
+  print(i)
+  i += 1
+
+
+Question:
+Stop the loop if i is 3.
+
+
+Solution:
+i = 1
+while i < 6:
+  if i == 3:
+    break
+  i += 1
+
+
+Question:
+
+In the loop, when i is 3, jump directly to the next iteration.
+
+Solution:
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    continue
+
+  print(i)
+
+
+Question:
+Print a message once the condition is false.
+
+
+Solution:
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+else:
+
+  print("i is no longer less than 6")
+
+
+
+Question:
+In the loop, when the item value is "banana", jump directly to the next item.
+
+
+Solution:
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  if x == "banana":
+    
+continue
+
+  print(x)
+
+
+
+Question:
+Exit the loop when x is "banana".
+
+
+Solution:
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  if x == "banana":
+    
+break
+
+  print(x)
+
+
+
+Question:
+If you do not know the number of arguments that will be passed into your function, 
+there is a prefix you can add in the function definition, which prefix?
+
+
+Solution:
+
+def my_function(*kids):
+  print("The youngest child is " + kids[2])
+
+
+Question:
+
+If you do not know the number of keyword arguments that will be passed into your function,
+ there is a prefix you can add in the function definition, which prefix?
+
+
+
+Solution:
+def my_function(**kid):
+  print("His last name is " + kid["lname"])
+
+Question:
+
+Create a lambda function that takes one parameter (a) and returns it.
+
+Solution:
+
+x = lambda a : a
+
+
+Question:
+Create a class named MyClass:
+
+
+Solution:
+class
+ MyClass:
+  x = 5
+
+
+Question:
+Create an object of MyClass called p1:
+
+Solution:
+
+class MyClass:
+  x = 5
+
+p1 = MyClass()
+
+
+Question:
+Use the p1 object to print the value of x:
+
+Solution:
+
+class MyClass:
+  x = 5
+
+p1 = MyClass()
+
+print(p1.x)
+
+
+Question:
+
+What is the correct syntax to assign a "init" function to a class?
+
+
+Solution:
+class Person:
+  def __init__ (self, name, age):
+    self.name = name
+    self.age = age
+
+
+
+Question:
+
+What is the correct syntax to create a class named Student that will inherit properties and methods from a class named Person?
+
+Solution:
+
+class Student(Person):
+
+
+Question:
+
+We have used the Student class to created an object named x.
+What is the correct syntax to execute the printname method of the object x?
+
+Solution:
+
+class Person:
+  def __init__(self, fname):
+    self.firstname = fname
+
+  def printname(self):
+    print(self.firstname)
+
+class Student(Person):
+  pass
+
+x = Student("Mike")
+x.printname()
+
+
+Question:
+What is the correct syntax of printing all variables and function names of the "mymodule" module?
+
+
+Solution:
+
+import mymodule
+
+print(dir(mymodule))
