@@ -63,6 +63,10 @@ son.override()
 
 
 #ALTER BEFORE OR AFTER
+# To alter the behavior before and the Parent class. The first thing to do is to override the function.
+# the python in-built function called SUPER is used to get the parentt version to call 
+
+
 
 class Parent(object):
 
@@ -76,9 +80,53 @@ class Child(Parent):
         super(Child,self).altered()
         print("CHILD,AFTER PARENT altered()")
 
-dad = Parent()
+dad = Parent(
 son = Child()
 
 
 dad.altered()
 son.altered()
+
+
+# 1, Overwriting the Parent.altered with the Child.altered 
+
+# 2, calling super(Child,self).altered() which is aware of the Inheritance and will get the parent class for you.
+# this should be interprieted as "call super with arguments Child and self, then call the function altered on whatever it returns."
+
+
+
+
+# Inheritance, Overide and Altered 
+
+class Parent(object):
+
+    def override(self):
+        print("PARENT override()")
+    
+    def implicit(self):
+        print("PARENT implicit()")
+    
+    def altered(self):
+        print("PARENT altered()")
+
+class Child (Parent):
+
+    def override(self):
+        print("CHILD override()")
+
+    def altered (self):
+        print("CHILD, BEFORE PARENT altered()")
+        super(Child,self).altered()
+        print("CHILD, AFTER PARENT altered()")
+
+dad = Parent()
+son = Child()
+
+dad.override()
+son.override()
+
+dad.altered()
+son.altered()
+
+dad.implicit()
+son.implicit()
