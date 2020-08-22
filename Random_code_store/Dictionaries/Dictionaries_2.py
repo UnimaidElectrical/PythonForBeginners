@@ -83,3 +83,47 @@ if not state:
 city = cities.get('TX', 'Does Not Exist')
 print(f"The city for the state 'TX' is: {city}")
 
+
+
+mystuff = {'apple': 'I AM THE HAPPIEST PERSON ALIVE!'}
+print(mystuff['apple'])
+
+
+
+
+**********************************
+
+******Dissecting Dictionaries*********
+
+d2={'spam':2, 'ham':1,'eggs':3}
+d3= {'food': {'ham':1, 'egg':2}}
+d3['food']['ham']
+#d2['spam']
+d2
+
+len(d2)
+d2.has_key('ham')
+'ham' in d3
+
+d2.keys()
+
+
+d3['food']['ham']
+'ham' in d3
+
+d2={'spam':2, 'ham':1,'eggs':3}
+d2['ham']=['grill','bake','fry']
+#d2
+del d2['eggs']
+#d2
+
+d2['brunch']='Bacon'
+d2
+d2.values(), d2.keys()
+d2.values(), d2.items()
+
+d2.get('spam'), d2.get('toast'), d2.get('toast', 88) 
+
+
+
+
