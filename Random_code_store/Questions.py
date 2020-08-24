@@ -634,3 +634,162 @@ list1= {"blue","green"}
 list2= {"green","blue"}
 list1.add("black")
 print(list((lambda x,y: x-y) (list1,list2))[0][2:])
+
+
+
+
+#What is the output of this code?
+def func(**kwargs):
+  print(kwargs["zero"])
+
+func(a = 0, zero = 8)
+
+
+# What is sum of the numbers printed by this code?
+for i in range(10):
+  try: 
+    if 10 / i == 2.0:
+      break
+  except ZeroDivisionError:
+    print(1)
+  else:
+    print(2)
+
+
+Fill in the blanks to swap the variable values with one single statement.
+
+a = 7
+b = 42
+a,b = b,a
+
+
+MAX_NUM=4
+
+def main():
+    for i in range (MAX_NUM):
+        print(i, factorial(i))
+
+
+def factorial(n):
+    n = 1
+    for i in range(n,n+1):
+        return *=i
+    return result
+
+main()
+
+****************************************8
+
+def divide_and_round(n):
+    """
+    Divides an integer n by 2 and rounds 
+    up to the nearest whole number
+    """
+    if n % 2 == 0:
+        n = n / 2
+    else:
+        n = (n + 1) / 2
+    return n
+
+def main():
+    n=42
+    n=divide_and_round(n)
+    print(int(n))
+
+main()
+
+
+
+S11302142
+
+S11302213
+
+
+
+
+
+''''''''''
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        for i in nums:
+            return
+        '''''''''''      
+
+            
+            
+class Solution(object):
+    def moveZeroes(self, nums):
+        i = count = 0
+        while count < len(nums):
+            if nums[i] == 0: nums.append(nums.pop(i))
+            else: i += 1
+            count += 1
+    
+
+'''''''''''       
+#while 0 in nums:
+            for i, num in enumerate(nums):
+                if nums[i] == 0:
+                    del nums[i]
+                    t += 1         #keep track of the "0's" we delete
+        for j in range(t):
+            nums.append(0)      #add them back to the end of the array
+'''''''''''''''
+
+
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        if not nums:
+            return nums
+        
+        i, j = 0, 0
+        while i < len(nums):
+            if nums[i] != 0:
+                nums[j], nums[i] = nums[i], nums[j]
+                i += 1
+                j += 1
+            
+            else:
+                i += 1
+
+
+
+
+
+
+******************************************
+
+d2={'spam':2, 'ham':1,'eggs':3}
+d3= {'food': {'ham':1, 'egg':2}}
+d3['food']['ham']
+#d2['spam']
+d2
+
+len(d2)
+d2.has_key('ham')
+'ham' in d3
+
+d2.keys()
+
+
+d3['food']['ham']
+'ham' in d3
+
+d2={'spam':2, 'ham':1,'eggs':3}
+d2['ham']=['grill','bake','fry']
+#d2
+del d2['eggs']
+#d2
+
+d2['brunch']='Bacon'
+d2
+d2.values(), d2.keys()
+d2.values(), d2.items()
+
+d2.get('spam'), d2.get('toast'), d2.get('toast', 88)  
