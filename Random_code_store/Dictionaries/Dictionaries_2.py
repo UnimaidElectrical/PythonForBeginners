@@ -126,4 +126,92 @@ d2.get('spam'), d2.get('toast'), d2.get('toast', 88)
 
 
 
+#using update:
+d2
+d3 = {'toast':4,'muffin':5}
+d2.update(d3)
+d2
+
+
+##############:::::::::::::::::::::::##############**********################
+###::::                                                               ###::::
+###::::     #A Language Table:                                        ###::::
+###::::                                                               ###::::
+##############:::::::::::::::::::::::##############**********################
+table = {'Python': 'Guido Van Rossum',
+        'Perl': 'Larry wall',
+        'Tcl': 'John Ousterhout'}
+table
+language = 'Python'  # creates an objects that points to the value (table array)
+table
+creator = table[language]
+creator
+
+second_language = 'perl'
+creator = table[language],second_language
+creator
+
+for lang in table.keys():
+    print (lang, '\t', table[lang])
+
+
+
+for lang in table.items():
+    print (lang, '\t', table[lang])
+
+##############:::::::::::::::::::::::##############**********################
+##############:::::::::::::::::::::::##############**********################
+##############:::::::::::::::::::::::##############**********################
+###::::                                                               ###::::
+###::::     #using Dictionaries for sparse data structures            ###::::
+###::::                                                               ###::::
+##############:::::::::::::::::::::::##############**********################
+##############:::::::::::::::::::::::##############**********################
+##############:::::::::::::::::::::::##############**********################
+
+
+Matrix= {}
+Matrix[(2,3,4)] = 88
+Matrix[(7,8,9)] = 99
+
+X = 2; Y = 3; Z = 4;
+Matrix[(X,Y,Z)]
+
+Matrix
+
+#This will throw up an error
+Matrix[(2,3,6)]
+
+'''
+to aviod the error messages we can use 
+
+If statements
+try Statement
+dictionary get method
+'''
+Matrix= {}
+Matrix[(2,3,4)] = 88
+
+
+#If statements
+if Matrix in ((2,3,6)):   # The implementation in Python 2 will be if Matrix.has_key((2,3,6)):
+    print (Matrix[(2,3,6)])
+else:
+    print (0)
+
+#try Statement
+Matrix= {}
+Matrix[(2,3,4)] = 88
+try:
+    print (Matrix[(2,3,6)])
+except KeyError:
+    print (0)
+
+
+#dictionary get method
+
+Matrix= {}
+Matrix[(2,3,4)] = 88
+#Matrix.get((2,3,4),0)
+Matrix.get((2,3,6),0) # The Zero being used here is to state either the main value or Zero
 
