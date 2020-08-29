@@ -215,3 +215,34 @@ Matrix[(2,3,4)] = 88
 #Matrix.get((2,3,4),0)
 Matrix.get((2,3,6),0) # The Zero being used here is to state either the main value or Zero
 
+
+##############:::::::::::::::::::::::##############**********################
+###::::                                                               ###::::
+###::::     #Ausing Dictionaries as records:                          ###::::
+###::::                                                               ###::::
+##############:::::::::::::::::::::::##############**********################
+
+rec = {}
+rec['name'] = 'mel'
+rec['age'] = 41
+rec['Job'] = 'trainer/writer'
+
+print (rec['name'])
+
+print(rec['name'],'age')   # This will print out two objects or keys in the dictionary. don't know why the second object is not allowed to sit in it's own square bracket
+
+
+
+#Nested Dictionary
+
+mel = {'name': 'Mark',
+        'jobs': ['trainer','writer','farmer'],
+        'web': 'www.rmi.net/~lutz',
+        'home': {'state': 'CO','zip':80501}}
+
+mel['name']
+mel['jobs']
+mel['jobs'][1][2]
+mel['home']['zip']
+
+
