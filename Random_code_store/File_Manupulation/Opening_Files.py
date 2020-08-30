@@ -120,3 +120,14 @@ except AssertionError:
   print(3)
 except:
   print(4)
+
+
+#reading and writing files
+myfile = open('myfile', 'w')        #Open for output (creates)
+myfile.write('hello text file\n')   #This writes a line of text 
+myfile.close()
+
+myfile = open('myfile' , 'r')   #Open for input 
+myfile.readline()               #Read the line back to the prompt
+'hello text file\n'
+myfile.readline()               #Empty string: the end of the file
