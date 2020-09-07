@@ -157,8 +157,9 @@ for key in tests:
         print(key,'Not Found!')
 
 
-
-
+'''
+This code checks for for simarities between the two strings and appended to a list
+'''
 seq1 = 'sp1akh6m'
 seq2 = 's6ch1a7m'
 
@@ -166,6 +167,45 @@ res = [] # Starting with an empty string
 for x in seq1:
     if x in seq2:
         res.append(x)
-print(res)
+print(res)  #The result of the comes as a list because of the append construct ['s','a','m']
 
 
+
+item = 'spam'
+for x in item:
+    print(x,)
+
+'''
+the output of this will be 
+s
+p
+a
+m
+'''
+
+
+#While Loop Iteration
+'''
+Using the while loop to transverse through the string while expecting another input 
+'''
+x='spam'
+i = 0
+while i < len(x):
+    print(x[i]),;
+    i+=1
+
+
+'''
+using the for loop to go through the string, quite similat to the while loop
+'''
+x='spam'
+for i in range(len(x),):
+    print(x[i])
+
+
+x='spam'
+len(x)
+list(range(len(x)))
+
+for i in range(len(x)):
+    print(x[i])
