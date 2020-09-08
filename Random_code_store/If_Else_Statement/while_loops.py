@@ -209,3 +209,118 @@ list(range(len(x)))
 
 for i in range(len(x)):
     print(x[i])
+
+
+S = 'abcdefghijk'
+list(range(0,len(S),2))
+
+for i in range(0, len(S), 2):
+    #print(S[i])
+    print(i)
+
+
+for i in range(0, len(S), 2): #This has stipulated the values that needs to be selected and how far it should go 
+    print(S[i])
+
+for x in S[::2]: print(x) #This means the same with the upper code as it is taking in the defaults for inbetween the columns
+
+
+
+#This line prints all the indexes and the object contents
+for i in range(0, len(S), 2):
+    print(S[i],i)
+    #print(i)
+
+
+'''
+print(*a, sep = ", ")  # print() argument after * must be an iterable, not int
+
+a = [1, 2, 3, 4, 5] 
+print(' '.join(map(str, a))) 
+'''
+
+
+#Changing Lists: range
+
+
+pi=['a','b','c','d','e','f']
+abi=[]
+for i in pi:#list(range(len(pi))):
+    abi.append(i)
+print(abi)
+
+
+********************
+L = [1,2,3,4,5]
+#L=['a','b','c','d','e','f']
+for i in range(len(L)):
+    L[i]+=1
+L
+    #print(L[i])
+
+
+i = 0
+while i < len(L):
+    L[i] +=1
+    i+=1
+L
+
+#Parallel Transverse: zip and map
+L1 = [1,2,3,4]
+L2 = [5,6,7,8]
+concatn=zip(L1,L2)
+list(concatn)   # this can be switched between Dictionary or List
+
+for (x,y) in zip(L1,L2): # this iterates through the list already made in the zip operation
+    print(x,'+',y, '-->',x+y)
+
+
+
+T1,T2,T3= (1,2,3,10),(4,5,6,11),(7,8,9)
+T3
+concatnn=zip(T1,T2,T3)
+list(concatnn)
+'''
+The results here will yield:
+[(1, 4, 7), (2, 5, 8), (3, 6, 9)]
+remember it is taking the very first element from all of the decleared lists
+what this also does is that it truncates the missing objects in a list that doesn't match with the others
+'''
+
+
+s1='abc'
+s2='xyz123'
+list(zip(s1,s2))
+m=map(None,s1,s2)  #I'm not too sure why this doesn't work pls debug
+m
+
+
+
+#Dictionary construction with zip
+
+D1 = {'spam':1,'eggs':2,'toast':5}
+D1
+
+D1 = {}
+D1['spam'] = 2
+D1['eggs'] = 4
+D1['toast'] = 6
+
+D1
+
+keys = ['spam','eggs','toast']
+vals = [7,8,9]
+
+list(zip(keys,vals))
+
+D2 = {}
+for k,v in zip(keys,vals): # same as (k,v) 
+    D2[k] = v  # what this is doing here is to associate the keys to the value pairs
+D2
+
+
+keys = ['spam', 'eggs','toast']
+vals = [11,12,13]
+D3 = dict(zip(keys,vals))
+D3
+
