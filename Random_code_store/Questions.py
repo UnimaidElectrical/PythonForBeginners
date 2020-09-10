@@ -699,15 +699,6 @@ def main():
 main()
 
 
-
-S11302142
-
-S11302213
-
-
-
-
-
 ''''''''''
 class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
@@ -765,31 +756,108 @@ class Solution:
 
 ******************************************
 
-d2={'spam':2, 'ham':1,'eggs':3}
-d3= {'food': {'ham':1, 'egg':2}}
-d3['food']['ham']
-#d2['spam']
-d2
+Leetcode questions
 
-len(d2)
-d2.has_key('ham')
-'ham' in d3
+******************************************
 
-d2.keys()
+1, 
+def rob(self, nums):
+        n = len(nums)
+        i=j=k=0
+        for x in range(n):
+            k=max(i + nums[x], j)
+            i,j=j,k
+        return j
+rob(0,[2,7,9,3,1])
 
 
-d3['food']['ham']
-'ham' in d3
+2, 
+def moveZeroes(self, nums):
+        i = 0
+        count = 0
+        while count < len(nums):
+            if nums[i] == 0: nums.append(nums.pop(i))
+            else: i += 1
+            count += 1
+        #print(nums)
+moveZeroes(0,[0,1,0,3,12])
 
-d2={'spam':2, 'ham':1,'eggs':3}
-d2['ham']=['grill','bake','fry']
-#d2
-del d2['eggs']
-#d2
 
-d2['brunch']='Bacon'
-d2
-d2.values(), d2.keys()
-d2.values(), d2.items()
 
-d2.get('spam'), d2.get('toast'), d2.get('toast', 88)  
+
+
+
+
+L = [1,2,4,8,16,32,64]
+x = 5
+found = i = 0
+while not found and i < len(L):
+    if 2**x == L[i]:
+        found = 1
+    else:
+        i +=1
+    
+    if found:
+        print('at index', i)
+    else:
+        print(x, 'not found')
+
+'''
+Chapter Questions
+Program logic alternatives. Consider the following code, which uses a while loop and found flag to search a list of powers of 2 for the value of 2 
+raised to the fifth power (32). It’s stored in a module file called power.py.
+'''
+
+L = [1, 2, 4, 8, 16, 32, 64] 
+X= 5
+found = False
+i= 0
+while not found and i < len(L):
+    if 2 ** X == L[i]:
+        found = True
+    else:
+        i = i+1
+    if found:
+        print('at index', i)
+    else:
+        print(X, 'not found')
+
+'''
+a. First, rewrite this code with a while loop else clause to eliminate the found flag and final if statement.
+'''
+
+L = [1, 2, 4, 8, 16, 32, 64] 
+X= 5
+i= 0
+while i < len(L):
+    if 2**X ==L[i]:
+        print('Found at index',i,'the list number is: ', L[i])
+    else:
+        print('Not found!','at index',i,'the list number is: ',L[i])
+    i+=1
+    
+
+b. Next, rewrite the example to use a for loop with an else clause, to eliminate the explicit list-indexing logic. 
+(Hint: to get the index of an item, use the list index method—L.index(X) returns the offset of the first X in list L.)
+
+L = [1, 2, 4, 8, 16, 32, 64] 
+X= 5
+i= 0
+for j in len(L):
+    if 2**X ==L[i]:
+        print('Found at index',i,'the list number is: ', L[i])
+    else:
+        print('Not found!','at index',i,'the list number is: ',L[i])
+    i+=1
+
+c. Next, remove the loop completely by rewriting the example with a simple in operator membership expression. 
+(See Chapter 8 for more details, or type this to test: 2 in [1,2,3].)
+
+d. Finally, use a for loop and the list append method to generate the powers-of-2 list (L) instead of hardcoding a list literal.
+Deeper thoughts:
+
+e. Do you think it would improve performance to move the 2 ** X expression outside the loops? How would you code that?
+
+f. As we saw in exercise 1, Python includes a map(function, list) tool that can generateapowers-of-2list,
+too:map(lambda x: 2 ** x, range(7)).Trytyping this code interactively; we’ll meet lambda more formally in the next part of this book, 
+especially in Chapter 19. Would a list comprehension help here (see Chapter 14)?
