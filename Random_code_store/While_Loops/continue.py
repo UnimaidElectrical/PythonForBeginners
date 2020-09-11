@@ -12,8 +12,6 @@ while True:
     print(i)
 print("Finished")
 
-
-
 '''
 The continue statement in Python returns the control to the beginning of the current loop. 
 When encountered, the loop starts next iteration without executing the remaining statements in the current iteration.
@@ -33,4 +31,3 @@ while var > 0:
       continue
    print ('Current variable value :', var)
 print ("Good bye!")
-
