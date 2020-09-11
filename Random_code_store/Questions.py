@@ -807,7 +807,7 @@ Chapter Questions
 Program logic alternatives. Consider the following code, which uses a while loop and found flag to search a list of powers of 2 for the value of 2 
 raised to the fifth power (32). It’s stored in a module file called power.py.
 '''
-
+#Starter Code
 L = [1, 2, 4, 8, 16, 32, 64] 
 X= 5
 found = False
@@ -836,22 +836,29 @@ while i < len(L):
         print('Not found!','at index',i,'the list number is: ',L[i])
     i+=1
     
-
+'''
 b. Next, rewrite the example to use a for loop with an else clause, to eliminate the explicit list-indexing logic. 
 (Hint: to get the index of an item, use the list index method—L.index(X) returns the offset of the first X in list L.)
-
+'''
 L = [1, 2, 4, 8, 16, 32, 64] 
+
 X= 5
-i= 0
-for j in len(L):
-    if 2**X ==L[i]:
-        print('Found at index',i,'the list number is: ', L[i])
+j= 0
+for i in range(j,7):
+    powr= 2**j
+    if powr == 2**X:
+        print('Found at index',j,'the list number is: ', powr)
     else:
-        print('Not found!','at index',i,'the list number is: ',L[i])
-    i+=1
+        print('Not found!','at index',j,'the list number is: ',powr)
+    j+=1
+
 
 c. Next, remove the loop completely by rewriting the example with a simple in operator membership expression. 
 (See Chapter 8 for more details, or type this to test: 2 in [1,2,3].)
+
+(x,y)
+for 5 in [1,2,3,4,5,6]:
+    for 
 
 d. Finally, use a for loop and the list append method to generate the powers-of-2 list (L) instead of hardcoding a list literal.
 Deeper thoughts:
@@ -861,3 +868,42 @@ e. Do you think it would improve performance to move the 2 ** X expression outsi
 f. As we saw in exercise 1, Python includes a map(function, list) tool that can generateapowers-of-2list,
 too:map(lambda x: 2 ** x, range(7)).Trytyping this code interactively; we’ll meet lambda more formally in the next part of this book, 
 especially in Chapter 19. Would a list comprehension help here (see Chapter 14)?
+
+
+
+
+* allNumeric(arr): returns true if all items in arr are ints or floats, otherwise false
+
+* removeNones(arr): returns arr without the None values in it
+* reverse a list, given [5,4,3,2,1] return [1,2,3,4,5]
+
+* turn ["a", "b", "c"] into "a,b,c" (turn a list of strings into one string separated by commas)
+
+def ListToString(L):
+    strings=","
+    print(strings.join(L))
+L=["a", "b", "c"]
+ListToString(L)
+
+    
+* given a sorted list like [1,2,3,4,5] turn it in [5,1,4,2,3] (so interleave the list such that max value is first, then min, then second max, then second min, etc)
+* multiplyItem(arr, i, x): given arr=["a","b","c"], i=0 and x=2, turn it into ["a", "a", "b", "c"] (multiply item at index i by x and insert in the same spot)
+* divMod(a, b) return as a pair the division and modulo of a and b. for example: divMod(7, 3) should return (2, 1) because 2*3 + 1 = 7
+* cross(a, b, c, d): a and b are strings, c and d are integers. given cross("foo", "bar", 2, 3), return "foofoobarbarbar"
+* contains(arr, value): return True if value is in arr
+
+
+* containsTwice(arr, value) return True of value is in arr at least two times
+
+* containsN(arr, value, n): return True if value is in arr exactly N times
+
+
+GivenVal = ["a","b","c","d","e","f","g","h","a","c","a","g","j","u","a","g","t","a"]
+x=5
+counting=''
+for i in GivenVal:
+    for j in GivenVal:
+        if i == j:
+            counting+=1
+            print(counting)
+
