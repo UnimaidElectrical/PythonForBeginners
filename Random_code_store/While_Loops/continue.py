@@ -25,6 +25,7 @@ for letter in 'Python':     # First Example
       continue
    print ('Current Letter :', letter)
 
+#The while statement loops through the values and when it finds 5 omits it by continueing the loop
 var = 10                    # Second Example
 while var > 0:              
    var -=1
