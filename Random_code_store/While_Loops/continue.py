@@ -12,7 +12,8 @@ while True:
     print(i)
 print("Finished")
 
-
+=======
+#Using the continue statement outside a loop causes an error
 
 '''
 The continue statement in Python returns the control to the beginning of the current loop. 
@@ -33,4 +34,3 @@ while var > 0:
       continue
    print ('Current variable value :', var)
 print ("Good bye!")
-
