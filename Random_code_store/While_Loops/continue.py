@@ -11,7 +11,9 @@ while True:
         break
     print(i)
 print("Finished")
+#Using the continue statement outside a loop causes an error
 
+=======
 '''
 The continue statement in Python returns the control to the beginning of the current loop. 
 When encountered, the loop starts next iteration without executing the remaining statements in the current iteration.
