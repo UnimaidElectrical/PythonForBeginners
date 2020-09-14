@@ -160,7 +160,7 @@ func(1,2,3,x=1,y=2)
 
 
 
-Combining Keywords and Defaults
+#Combining Keywords and Defaults
 
 def func(spam, eggs, toast=0, ham=0): #First 2 required
     print(spam,eggs, toast,ham)
@@ -170,6 +170,78 @@ func(1,ham=1, eggs=0)           #Output: (1,0,0,1)
 func(spam=1, eggs=0)            #Output: (1,0,0,0)
 func(toast=1,eggs=2,spam=3)     #Output: (3,2,1,0)
 func(1,2,3,4)                   #Output: (1,2,3,4)
+
+
+def min1(*args):
+    res = args[0]
+    for arg in args[1:]:
+        if  arg  < res:
+            res = arg
+    return res
+
+def min2(first, *rest):
+    for arg in rest:
+        if arg < first:
+            first = arg
+    return first
+
+def min3(*args):
+    tmp = list(args)
+    tmp.sort()
+    return tmp[0]
+
+print(min1(3,4,1,2))
+print(min2('aa','bb','cc'))
+print(min3([2,2],[1,1],[3,3]))
+
+
+
+madam = ([2,2],[1,1],[3,3])
+madam
+
+tada = list(madam)
+tada
+
+tada.sort()
+tada
+
+
+def minmax(test,*args):    #takes in the lessthan or grtrthan operator and the other given arguments
+    res = args[0]          #takes in the first value
+    for arg in args[1:]:   #loops through the slice of the remaining values
+        if test(arg, res):  #takes in the arg and res arguments 
+            res = arg       #equates the res and arg values
+    return res
+    print(res)
+
+def lessthan(x,y):
+    return x < y
+
+def grtrthan(x,y):
+    return x > y
+
+print(minmax(lessthan,4,2,1,5,6,3)) 
+print(minmax(grtrthan,4,2,1,5,6,3))
+
+
+
+def intersect(*args): 
+    res = []
+    for x in args[0]:                   #Scan first sequence
+        for other in args[1:]:          #for all other args.
+            if x not in other:          #Item in each one?
+                break                   #If not then break out of the loop
+            else:
+                res.append(x)           #Then add items to the end
+        return res
+    
+def union(*args)
+    res = []
+    for seq in args:                    #For all args
+        for x in seq:                   #For all nodes
+            if not x in res:
+                res.append(x)           #Add new items to the result
+    return res
 
 
 
