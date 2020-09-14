@@ -245,3 +245,18 @@ def union(*args)
 
 
 
+#Using the fuctions as module calls.
+
+
+from inter2 import intersect, union                         # Mixed types
+ s1, s2, s3 = "SPAM", "SCAM", "SLAM"
+
+intersect(s1, s2), union(s1, s2)                            # Two operands
+#The Result  #(['S', 'A', 'M'], ['S', 'P', 'A', 'M', 'C'])
+
+>>> intersect([1, 2, 3], (1, 4)) [1]
+>>> intersect(s1, s2, s3) ['S', 'A', 'M']                   # Three operands
+
+
+>>> union(s1, s2, s3)
+['S', 'P', 'A', 'M', 'C', 'L']
