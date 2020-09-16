@@ -59,3 +59,9 @@ key = 'got'
 
 
 
+def ifelse(a,b,c):
+    return ((a and [b]) or [c])[0]
+
+ifelse(1, 'spam', 'ni')
+
+ifelse(0,'spam','ni')
