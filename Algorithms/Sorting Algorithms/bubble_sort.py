@@ -22,3 +22,7 @@ def bubble_sort(arr):
                 swapped = True
                     
     return arr
+
+arr = [3,2,10,19,-1]
+bubble_sort(arr)
+print(arr)

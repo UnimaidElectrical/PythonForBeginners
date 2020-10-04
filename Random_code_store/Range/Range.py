@@ -45,3 +45,23 @@ print(nums[2])
 
 
 
+#Counter Loops: Range
+list(range(0,5)), list(range(2,5)), list(range(0,10,2))
+
+list(range(-5,5))
+list(range(5,-5,-1))
+
+for i in range(3):
+    print( i, ('python'))
+
+
+master=[3,5,8,4,1,5,9,3,5,0]
+s=xrange(len(master))
+print(s)
+
+
+master=[3,5,8,4,1,5,9,3,5,0]
+for i in range(len(master)):
+    print(i)
+#Notice that range does not return the contents of the list but their indexes
+
