@@ -45,3 +45,56 @@ print(nums[2])
 
 
 
+#Counter Loops: Range
+list(range(0,5)), list(range(2,5)), list(range(0,10,2))
+
+list(range(-5,5))
+list(range(5,-5,-1))
+
+for i in range(3):
+    print( i, ('python'))
+
+
+master=[3,5,8,4,1,5,9,3,5,0]
+s=xrange(len(master))
+print(s)
+
+
+master=[3,5,8,4,1,5,9,3,5,0]
+for i in range(len(master)):
+    print(i)
+#Notice that range does not return the contents of the list but their indexes
+#Result/output
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+nums=[2,5,3,7,5,8]
+for i in range(len(nums)):
+    for j in range(i+1,len(nums)):
+        print(i,j)
+#this solution does not repeat based on order. The pairs are unique
+#But it does all possible solutions  
+#Result/output
+0 1
+0 2
+0 3
+0 4
+0 5
+1 2
+1 3
+1 4
+1 5
+2 3
+2 4
+2 5
+3 4
+3 5
+4 5

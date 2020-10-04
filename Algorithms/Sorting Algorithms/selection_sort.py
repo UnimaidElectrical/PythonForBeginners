@@ -23,3 +23,7 @@ def selection_sort(arr):
         arr[minimum], arr[i] = arr[i], arr[minimum]
             
     return arr
+
+arr = [4,1,6,4,8,10,28,-3,-45]
+selection_sort(arr)
+print(arr)
