@@ -159,7 +159,3 @@ def iter_countdown_timer(n):
 z=5
 print(f"Counting down from {z}: ")
 iter_countdown_timer(z)
-
-
-
-
