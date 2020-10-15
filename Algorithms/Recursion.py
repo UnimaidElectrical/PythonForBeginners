@@ -13,7 +13,7 @@ root = TreeNode(1)
 root.right = TreeNode(2)
 root.right.left = TreeNode(3)
 
-import sys
+
 def traverse(node, output):
     if node is None:
       # we are visiting an empty child
@@ -118,3 +118,44 @@ root.left.left = Node(4)
 root.left.right = Node(5) 
 
 inOrder(root) 
+"""
+
+
+***************************** RECURSION EXPLAINED*************************
+
+
+Recursion is a function that calls itself
+It calls itself till it does not call itself anymore. i.e the the conditon runs out 
+The condition where it stops calling itself is called the base ccase
+when thinking of recursion, try to think about the base case first
+
+
+
+
+#Implementing a countdown timer using recursion
+
+import time
+def recur_countdown_timer(n):
+	if n==0:
+		return n
+	else:
+		print(n)
+		time.sleep(1)
+		return recur_countdown_timer(n-1)
+z=5
+print(recur_countdown_timer(z))
+
+
+
+#Implementing a countdown timer using iteration
+
+import time
+def iter_countdown_timer(n):
+	while n>0:
+		print(n)
+		time.sleep(1)
+		n -=1
+	print(n)
+z=5
+print(f"Counting down from {z}: ")
+iter_countdown_timer(z)
