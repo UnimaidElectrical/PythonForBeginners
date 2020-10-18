@@ -142,8 +142,8 @@ def recur_countdown_timer(n):
 		print(n)
 		time.sleep(1)
 		return recur_countdown_timer(n-1)
-z=5
-print(recur_countdown_timer(z))
+#z=5
+print(recur_countdown_timer(5))
 
 
 
@@ -159,3 +159,105 @@ def iter_countdown_timer(n):
 z=5
 print(f"Counting down from {z}: ")
 iter_countdown_timer(z)
+
+
+Using Recursion to implement a Factorial
+
+********FACTORIAL*********
+
+A factorial is a product of an interger n, and all the intergers below it
+
+Factorial of 4 => 4*3*2*1 = 24
+
+It is denoted by the symbol '!' after the number, so 5 factorial would be written as '5!'
+
+Factorial of 0 is 1
+
+What will be the base case if we were to do this recursively?
+
+the base case here will be
+
+
+n! = n* (n-1)!
+for n> 0
+
+factorial(n) = n * factorial(n-1)
+for n > 0
+
+
+
+def factorial_recur(n):
+	if n==0:
+		return 1		#This is to solve the first condition where the factorial of zero is one
+	else:
+		return n * factorial_recur(n-1)
+z=0  #expecting 1
+print(f"The value of {z}! is {factorial_recur(z)}")
+z=1  #expecting 1
+print(f"The value of {z}! is {factorial_recur(z)}")
+z=5  #expecting 120
+print(f"The value of {z}! is {factorial_recur(z)}")
+
+
+
+
+*************FIBONACCI SERIES*******************
+Recursive Implementation
+
+
+Fibonacci Series is a series of intergers
+
+value of the nth interger can be found by adding the values of the two previous intergers in the series
+
+the series starts off with 0, 1, 1, 2, 3, 5, 8, 13 ...
+
+What will be the base case if we did this recursively
+
+
+First thing to look out for when doing a recursion is to look for the base cases
+
+
+Base Case
+if n = 0, return 0
+
+if n = 1, return 1
+
+doing this recursively
+
+def fib_recur(n):
+	if n==0:
+		return 0
+	elif n==1:
+		return 1
+	else:
+		return fib_recur(n-1) + fib_recur(n-2)
+
+def fib_runner(z):
+	print(f"The {z}th number of the fibonacci sequence is {fib_recur(z)}")
+z=0
+fib_runner(z)
+z=1
+fib_runner(z)
+z=50
+fib_runner(z)
+
+
+
+Getting the rest of the fib series			for every n> 1:
+									   fib(n) = fib(n-1) + fib(n-2)
+
+fib(2) = 1 + 0		     -->          fib(2) = fib(1) + fib(0)
+
+fib(3) = 1 + 1		     -->          fib(3) = fib(2) + fib(1)
+
+fib(4) = 2 + 1		     -->          fib(4) = fib(3) + fib(2)
+
+fib(5) = 3 + 2		     -->          fib(5) = fib(4) + fib(3)
+
+fib(6) = 5 + 3		     -->          fib(6) = fib(5) + fib(4)
+
+fib(7) = 8 + 5		     -->          fib(7) = fib(6) + fib(5)
+
+fib(8) = 1 + 8		     -->          fib(8) = fib(7) + fib(6)
+
+
