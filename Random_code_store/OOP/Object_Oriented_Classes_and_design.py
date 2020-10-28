@@ -283,7 +283,6 @@ class Finished(Scene):
 
 
 
-
 class Map (object):
 
     scenes = {
@@ -303,6 +302,9 @@ class Map (object):
         return val
     def opening_scene(self):
         return self.next_scene(self.start_scene)
+
+
+
 
 
 
