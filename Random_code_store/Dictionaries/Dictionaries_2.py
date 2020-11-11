@@ -1,6 +1,8 @@
 
 
-# Create a mapping of state to abbreviation 
+# Create a mapping of state to abbreviation
+from click import prompt
+
 states ={
     'Oregon': 'OR',
     'Florida': 'FL',
@@ -218,7 +220,7 @@ Matrix.get((2,3,6),0) # The Zero being used here is to state either the main val
 
 ##############:::::::::::::::::::::::##############**********################
 ###::::                                                               ###::::
-###::::     #Ausing Dictionaries as records:                          ###::::
+###::::     #Using Dictionaries as records:                          ###::::
 ###::::                                                               ###::::
 ##############:::::::::::::::::::::::##############**********################
 
@@ -244,5 +246,115 @@ mel['name']
 mel['jobs']
 mel['jobs'][1][2]
 mel['home']['zip']
+
+
+#Cyclic Data Structures
+#These are datastructures that get caught in a loop, say for instance appending a string to al already existing list with the same string
+
+L= ['grail']
+L.append(L)
+L
+
+
+Immutable calls cannot be changed in place but there are ways to mitigate this, but it may be costly for scaling up
+
+T = (1,2,3)
+T[2] = 4         #We should expect an error here
+T = T[:2] + (4,)  #We should expect to get (1,2,4) here
+T
+
+
+
+
+
+
+'''
+
+def make_album(artist_name,album_title,track_number=''):
+    album_name = {name:artist_name, title:album_title,track:track_number}
+    #return full_name.title()
+
+while True:
+    if track_number:
+        full_names = artist_name + '' + album_title + '' + track_number
+        #return full_names.title()
+    else:
+        full_names = artist_name + '' + album_title
+        #return full_names.title()
+
+#artist_name = input("Artist Name: ")
+#album_title = input("Album Title: ")
+
+music=make_album(artist_name,album_title)
+print(music)
+
+
+#Album= input(f'Please enter the album name and album title to search for: ')
+#f'Please enter the album name and album title to search for: ',
+
+print(make_album(xzibit, man vs machine,10))
+'''
+
+def make_album(artist, title):
+    '''This is to make a dictionary of album'''
+    album_dict = {
+        'artist':artist.title(),
+        'title':title.title(),
+    }
+    return album_dict
+
+album = make_album('greenday','shadow')
+print(album)
+album = make_album('metallica','unbellivable')
+print(album)
+
+
+
+
+
+def make_albumTracks(artist,title,tracks=0):
+    '''This makes a dictionary of artist titles and tracks'''
+    album_dict_tracks={
+        'album':artist.title(),
+        'title':title.title(),
+    }
+    if tracks:
+        album_dict_tracks['tracks'] = tracks
+    return album_dict_tracks
+album = make_album('greenday','shadow',tracks=10)
+print(album)
+album = make_album('metallica','unbellivable')
+print(album)
+
+
+
+
+def make_album(artist, title,track=0):
+    album_dict={
+        'artist':artist.title(),
+        'title':title.title(),
+    }
+    if track:
+        album_dict['track'] = track
+    return album_dict
+
+title_prompt = "/nWhat album are you thinking of: "
+artist_prompt = "Who is the artist? "
+
+print("Enter quit at any time you want to stop")
+
+while True:
+    title = input(title_prompt)
+    if title == 'quit':
+        break
+    artist= input(artist_prompt)
+    if artist == 'quit':
+        break
+    album=make_album(artist,title)
+    print(album)
+
+
+
+
 
 
