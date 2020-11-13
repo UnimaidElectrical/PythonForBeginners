@@ -21,7 +21,7 @@ primary = {
 }
 
 print(primary["red"])
-print(primary["yellow"])
+print(primary["blue"])
 
 # A dictionary can store any types of data as values.
 # An empty dictionary is defined as {}.
@@ -79,4 +79,15 @@ print("three" in nums)
 print(4 not in nums)
 
 
+#We notice that this only works for the last 3 entries or the dictionary., Why ?
 
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964,
+  "brand": "Tesla",
+  "model": "model S",
+  "year": 2018
+}
+for x in thisdict.items():
+  print(x)
