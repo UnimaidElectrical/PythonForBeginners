@@ -123,6 +123,16 @@ for key,value in user_o.items():
     print("Value " + value)
 
 
+user_1 = {
+'First Name': 'Mercedes',
+'Last Name':'Bench',
+'age': 23,
+'City Of Residence' :'San Francisco',
+}
+for man in user_1():
+    print(man)
+
+
 favorite_languages = {
 'jen': 'python',
 'sarah': 'c',
@@ -166,4 +176,161 @@ for name in favorite_languages.keys():
         print(" Hi " + name.title() + " I can see that your favorite language is  "+ favorite_languages[name].title() + "!")
 
 
+
+#Looping through a Dictionary's keys in order
+favorite_languages = {
+'jen': 'python',
+'sarah': 'c',
+'edward': 'ruby',
+'phil': 'python',
+}
+for name in sorted(favorite_languages.keys()):
+    print(name.title() + ", thank you for taking the poll.")
+
+
+
+#Values
+#Looping through all the values in a dictionary
+
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+}
+print("The following languages have been mentioned: ")
+for language in favorite_languages.values():
+    print(language.title())
+
+
+#Making this sorted
+for language in sorted(favorite_languages.values()):
+    print(language.title())
+
+
+
+
+#Removing the duplicates from the values
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+}
+for language in set(favorite_languages.values()):
+    print (language.title())
+
+
+
+
+#Making this sorted
+for language in sorted(set(favorite_languages.values())):
+    print (language.title())
+
+
+
+
+
+#Nesting
+#    A list of Dictionaries:
+
+
+#Creating the dictionary
+alien_o = {'color':'green','points':5}
+alien_1 = {'color':'yellow','points':10}
+alien_2 = {'color':'red','points':15}
+
+
+#Packing the created dictionary into a list
+aliens = [alien_o,alien_1,alien_2]
+
+for alien in aliens:
+    print(alien)
+
+
+
+#Make an empty list for storing aliens
+aliens = []
+
+#Make 30 green aliens.
+for alien_number in range(30):
+    new_alien = {'color':'green','points':5,'speed':'slow'}
+    aliens.append(new_alien)    # In this case you're applying new_alien to the aliens list
+
+#Show the first 5 aliens
+for alien in aliens[:5]:
+    print(alien)
+print("..............")
+
+#Show how many aliens have been created
+print("Total number of aliens: " + str(len(aliens)))
+
+
+
+
+#first we Make an empty list
+aliens = []
+for alien_number in range(0,30):
+    new_alien = {'color':'green','points':5,'speed':'slow'}
+    alien.append(new_alien)
+
+#This will only modify the first 3 aliens in the list
+for alien in aliens[0:3]:
+    if alien['color']=='green':
+        alien['color'] = 'yellow'
+        alien['speed'] = 'medium'
+        alien['points'] = 10
+    elif alien['color'] == 'yellow':
+        alien['color'] = 'red'
+        alien['speed'] = 'fast'
+        alien['points'] = 15
+
+
+#A  List in a Dictionary
+
+pizza = {
+    'crust':'thick',
+    'toppings': ['mushrooms', 'extra cheese'],
+}
+print("You ordered a " + pizza['crust'] + "-crust pizza " + " with the following toppings: ")
+
+for topping in pizza['toppings']:
+    print("\t" + topping)
+
+
+
+
+favorite_languages = {
+'jen': ['python', 'ruby'],
+'sarah': ['c'],
+'edward': ['ruby', 'go'],
+'phil': ['python', 'haskell'],
+}
+
+for name, languages in favorite_languages.items():
+    print("\n" + name.title() + " 's favorite languages are: ")
+    for language in languages:
+        print("\t" + language.title())
+
+
+
+#A Dictionary in Dictionary
+
+users = {'aeinstein':
+    {'first': 'albert',
+    'last': 'einstein',
+    'location': 'princeton',
+                            },'mcurie': {
+                                        'first': 'marie',
+                                        'last': 'curie',
+                                        'location': 'paris',
+                                        },
+        }
+
+for username,user_info in users.items():
+    print("\nUsername: "+ username)
+    full_name = user_info['first'] + " " + user_info['last']
+    location = user_info['location']
+    print("\tFull Name: "+ full_name.title())
+    print("\tLocation: "+ location.title())
 
