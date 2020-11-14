@@ -63,3 +63,5 @@ alien_o['color'] = 'yellow'
 print("The alien is now " + alien_o['color'] + ".")
 
 
+
+#Removing Key-Value Pairs
