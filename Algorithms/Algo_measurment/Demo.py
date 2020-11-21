@@ -1,4 +1,4 @@
-print("Algorithms file loaded")
+#print("Algorithms file loaded")
 
 
 def quicksort(arr):
@@ -43,7 +43,6 @@ def mergesort(arr):
         l1 = mergesort(arr[:middle])
         l2 = mergesort(arr[middle:])
         return merge_sorted(l1,l2)
-
 
 
 def bubblesort(arr):
