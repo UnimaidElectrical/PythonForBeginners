@@ -131,6 +131,9 @@ class AlgoHashTable:
     def __str__(self):
         return "".join(str(item) for item in self.hash_table)
 
+    def __str__(self):
+        return "".join(str(item) for item in self.hash_table)
+
 
 hash_table = AlgoHashTable(256)
 print(hash_table)
@@ -138,5 +141,3 @@ hash_table.set_val('mashrur@example.com', 'some value')
 hash_table.set_val('johndoe@example.com', 'some other value')
 print(hash_table)
 '''
-
-
