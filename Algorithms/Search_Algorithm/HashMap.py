@@ -132,7 +132,10 @@ class AlgoHashTable:
         return "".join(str(item) for item in self.hash_table)
 
     def __str__(self):
-        return "".join(str(item) for item in self.hash_table)
+        pass
+
+    def __str__(self):
+        pass
 
 
 hash_table = AlgoHashTable(256)
