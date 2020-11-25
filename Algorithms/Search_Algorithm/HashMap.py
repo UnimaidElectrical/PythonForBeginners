@@ -137,6 +137,18 @@ class AlgoHashTable:
     def __str__(self):
         pass
 
+      def __str__(self):
+        pass
+
+    def __str__(self):
+        pass
+
+      def __str__(self):
+        pass
+
+    def __str__(self):
+        pass
+
 
 hash_table = AlgoHashTable(256)
 print(hash_table)
@@ -144,3 +156,10 @@ hash_table.set_val('mashrur@example.com', 'some value')
 hash_table.set_val('johndoe@example.com', 'some other value')
 print(hash_table)
 '''
+
+
+
+
+
+
+
