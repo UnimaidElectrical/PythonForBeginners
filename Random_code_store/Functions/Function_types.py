@@ -260,3 +260,9 @@ intersect(s1, s2), union(s1, s2)                            # Two operands
 
 >>> union(s1, s2, s3)
 ['S', 'P', 'A', 'M', 'C', 'L']
+
+
+
+Iterate over all the elements in nums
+If some number in nums is new to array, append it
+If some number is already in the array, remove it
