@@ -119,8 +119,40 @@ for x in my_list:
 all_lists = ['About','Automatically','switching','between','devices','Quick','access','Seamless','connected','comfortable']
 count = 0
 for element in all_lists:
-    print(all_lists)
+    print(element)
     if count == 4:
         print("count is 4")
-
     count +=1
+
+
+
+method 1
+all_lists = ['About','Automatically','switching','between','devices','Quick','access','Seamless','connected','comfortable']
+count = 0
+for element in all_lists:
+    if count == 4:
+        print("count is 4")
+    #else:
+        #print("count is not equal to 4")
+    #print(all_lists)
+    count += 1
+
+
+
+method 2
+
+all_lists = ['About','Automatically','switching','between','devices','Quick','access','Seamless','connected','comfortable']
+for x in range(len(all_lists)):
+    print(all_lists[x])
+    if x == 4:
+        print("x is 4")
+
+Method 3:
+
+all_lists = ['About','Automatically','switching','between','devices','Quick','access','Seamless','connected','comfortable']
+for x, element in enumerate(all_lists):
+    print(element)
+    if x == 4:
+        print("count is 4")
+
+        
