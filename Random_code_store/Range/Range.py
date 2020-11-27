@@ -98,3 +98,29 @@ for i in range(len(nums)):
 3 4
 3 5
 4 5
+
+
+
+my_list = ["apples", "pears", "oranges", "fruits"]
+
+for x in range(len(my_list)):
+    print(x)    #This prints the index of the numbers
+    print("*****************")
+    print(my_list[x])       #This prints the entries of the list
+
+my_list = ["apples", "pears", "oranges", "fruits"]
+for x in my_list:
+    print(x)  # This prints the list
+
+
+
+
+
+all_lists = ['About','Automatically','switching','between','devices','Quick','access','Seamless','connected','comfortable']
+count = 0
+for element in all_lists:
+    print(all_lists)
+    if count == 4:
+        print("count is 4")
+
+    count +=1
