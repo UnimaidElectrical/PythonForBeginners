@@ -155,26 +155,4 @@ for x, element in enumerate(all_lists):
     if x == 4:
         print("count is 4")
 
-
-#Enumerating a List
-#With the help of Python enumerate function, we can iterate over the index and value in a Python list by using a basic for loop. Let us see how:
-
-List = [“Red”, “Green”, “Black”, “Blue”]
-for i, j in enumerate(List):
-print(i, j)
-
-'''
-Output:
-0 Red
-1 Green
-2 Black
-3 Blue
-'''
-
-#Using Enumerate with Dictionary
-
-all_lists = ['About','Automatically','switching','between','devices','Quick','access','Seamless','connected','comfortable']
-Dict = dict(enumerate(all_lists))
-print(Dict)
-
-
+        
