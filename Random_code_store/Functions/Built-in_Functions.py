@@ -467,6 +467,384 @@ This integer is then supplied to the bin() method.
 %%%###:::
 ----->         bool()     <--------
 
+The bool() method converts a value to Boolean (True or False) using the standard truth testing procedure.
+
+
+The syntax of bool() is:
+##################################################
+bool([value])
+
+
+bool() parameters
+##################################################
+It's not mandatory to pass a value to bool(). If you do not pass a value, bool() returns False.
+
+In general use, bool() takes a single parameter value. 
+bool can take a string, int, float, list, tuple or dict
+
+
+
+Return Value from bool()
+bool() returns:
+
+False if the value is omitted or false
+True if the value is true
+
+
+-> The following values are considered false in Python:
+
+None
+False
+Zero of any numeric type. For example, 0, 0.0, 0j
+Empty sequence. For example, (), [], ''.
+Empty mapping. For example, {}
+objects of Classes which has __bool__() or __len()__ method which returns 0 or False
+All other values except these values are considered true.
+
+
+Example: How bool() works?
+test = []
+print(test,'is',bool(test))
+
+test = ()
+print(test,'is',bool(test))
+
+test = {}
+print(test,'is',bool(test))
+
+test = [0]
+print(test,'is',bool(test))
+
+test = 0.0
+print(test,'is',bool(test))
+
+test = None
+print(test,'is',bool(test))
+
+test = True
+print(test,'is',bool(test))
+
+test = 'Easy string'
+print(test,'is',bool(test))
+
+Output
+[] is False
+() is False
+{} is False
+[0] is True
+0.0 is False
+None is False
+True is True
+Easy string is True
+
+
+%%%###:::
+----->         bytearray()     <--------
+
+The bytearray() method returns a bytearray object which is an array of the given bytes.
+
+
+
+The syntax of bytearray() method is:
+##################################################
+bytearray([source[, encoding[, errors]]])
+
+bytearray() method returns a bytearray object which is mutable (can be modified) 
+sequence of integers in the range 0 <= x < 256.
+
+If you want the immutable version, use bytes() method.
+
+
+bytearray() Parameters
+bytearray() takes three optional parameters:
+
+source (Optional) - source to initialize the array of bytes.
+encoding (Optional) - if the source is a string, the encoding of the string.
+errors (Optional) - if the source is a string, the action to take when the encoding conversion fails.
+
+
+
+The source parameter can be used to initialize the byte array in the following ways:
+
+Different source parameters
+Type	Description
+String	Converts the string to bytes using str.encode() Must also provide encoding and optionally errors
+Integer	Creates an array of provided size, all initialized to null
+Object	A read-only buffer of the object will be used to initialize the byte array
+Iterable	Creates an array of size equal to the iterable count and initialized to the iterable elements Must be iterable of integers between 0 <= x < 256
+No source (arguments)	Creates an array of size 0.
+
+
+Return value from bytearray()
+##################################################
+bytearray() method returns an array of bytes of the given size and initialization values.
+
+Example 1: Array of bytes from a string
+
+string = "Python is interesting."
+
+# string with encoding 'utf-8'
+arr = bytearray(string, 'utf-8')
+print(arr)
+
+Output
+bytearray(b'Python is interesting.')
+
+
+
+Example 2: Array of bytes of given integer size
+size = 5
+
+arr = bytearray(size)
+print(arr)
+
+Output
+bytearray(b'\x00\x00\x00\x00\x00')
+
+
+
+Example 3: Array of bytes from an iterable list
+rList = [1, 2, 3, 4, 5]
+
+arr = bytearray(rList)
+print(arr)
+Output
+
+bytearray(b'\x01\x02\x03\x04\x05')
+
+
+
+
+%%%###:::
+----->         callable()     <--------
+
+The callable() method returns True if the object passed appears callable. If not, it returns False.
+
+
+The syntax of callable() is:
+
+callable(object)
+
+
+callable() Parameters
+callable() method takes a single argument object.
+
+
+
+Return value from callable()
+##################################################
+callable() method returns:
+
+True - if the object appears callable
+False - if the object is not callable.
+It important to remember that, even if callable() is True, call to the object may still fail.
+
+However, if callable() returns False, call to the object will certainly fail.
+
+
+Example 1: How callable() works?
+x = 5
+print(callable(x))
+
+def testFunction():
+  print("Test")
+
+y = testFunction
+print(callable(y))
+Output
+
+False
+True
+
+
+Here, the object x is not callable. And, the object y appears to be callable (but may not be callable).
+
+
+
+Example 2: Callable Object 
+class Foo:
+  def __call__(self):
+    print('Print Something')
+
+print(callable(Foo))
+Output
+
+True
+The instance of Foo class appears to be callable (and is callable in this case).
+
+class Foo:
+  def __call__(self):
+    print('Print Something')
+
+InstanceOfFoo = Foo()
+
+# Prints 'Print Something'
+InstanceOfFoo()
+
+
+
+
+
+Example 3: Object Appears to be Callable but isn't callable.
+class Foo:
+  def printLine(self):
+    print('Print Something')
+
+print(callable(Foo))
+
+
+Output
+True
+
+
+
+
+The instance of Foo class appears to be callable but it's not callable. The following code will raise an error.
+
+class Foo:
+  def printLine(self):
+    print('Print Something')
+
+print(callable(Foo))
+
+InstanceOfFoo = Foo()
+# Raises an Error
+# 'Foo' object is not callable
+InstanceOfFoo()
+
+
+Output
+True
+
+Traceback (most recent call last):
+File "", line 10, in 
+TypeError: 'Foo' object is not callable
+
+
+
+
+
+
+
+%%%###:::
+----->         bytes()     <--------
+The bytes() method returns a immutable bytes object initialized with the given size and data.
+
+The syntax of bytes() method is:
+##################################################
+
+bytes([source[, encoding[, errors]]])
+bytes() method returns a bytes object which is an immutable (cannot be modified) sequence of integers in the range 0 <=x < 256.
+
+If you want to use the mutable version, use bytearray() method.
+
+
+
+bytes() Parameters
+##################################################
+bytes() takes three optional parameters:
+
+source (Optional) - source to initialize the array of bytes.
+encoding (Optional) - if the source is a string, the encoding of the string.
+errors (Optional) - if the source is a string, the action to take when the encoding conversion fails.
+The source parameter can be used to initialize the byte array in the following ways:
+
+Different source parameters
+Type	Description
+String	Converts the string to bytes using str.encode() Must also provide encoding and optionally errors
+Integer	Creates an array of provided size, all initialized to null
+Object	A read-only buffer of the object will be used to initialize the byte array
+Iterable	Creates an array of size equal to the iterable count and initialized to the iterable elements Must be iterable of integers between 0 <= x < 256
+No source (arguments)	Creates an array of size 0
+Return value from bytes()
+The bytes() method returns a bytes object of the given size and initialization values.
+
+
+
+
+Example 1: Convert string to bytes
+string = "Python is interesting."
+
+# string with encoding 'utf-8'
+arr = bytes(string, 'utf-8')
+print(arr)
+Output
+
+b'Python is interesting.'
+
+
+
+Example 2: Create a byte of given integer size
+size = 5
+
+arr = bytes(size)
+print(arr)
+Output
+
+b'\x00\x00\x00\x00\x00'
+
+
+
+Example 3: Convert iterable list to bytes
+rList = [1, 2, 3, 4, 5]
+
+arr = bytes(rList)
+print(arr)
+Output
+
+b'\x01\x02\x03\x04\x05'
+
+
+
+%%%###:::
+----->         chr()     <--------
+The chr() method returns a character (a string) from an integer (represents unicode code point of the character).
+
+
+The syntax of chr() is:
+
+chr(i)
+
+
+chr() Parameters
+##################################################
+chr() method takes a single parameter, an integer i.
+
+The valid range of the integer is from 0 through 1,114,111.
+
+
+Return Value from chr()
+##################################################
+chr() returns:
+
+a character (a string) whose Unicode code point is the integer i
+If the integer i is outside the range, ValueError will be raised.
+
+Example 1: How chr() works?
+print(chr(97))
+print(chr(65))
+print(chr(1200))
+Output
+
+a
+A
+Ұ
+
+
+Example 2: Integer passed to chr() is out of the range
+print(chr(-1))
+Output
+
+Traceback (most recent call last):
+File "", line 1, in 
+ValueError: chr() arg not in range(0x110000)
+When you run the program, ValueError is raised.
+
+It's because the argument passed to chr() method is out of the range.
+
+The reverse operation of chr() function can be performed by ord() function. To learn more, visit Python ord() function
+
+
 
 
 
