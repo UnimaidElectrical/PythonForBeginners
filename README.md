@@ -27,3 +27,4 @@ This channel will host problems of a vast array from simple logic to Psuedo code
 ## Contributing Guidelines
 
 To contribute make sure the solution or Algorithm belongs to the right folders and haven't been commited yet! Make sure to add the number of the Issue in your PR.
+
